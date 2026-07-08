@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam Cogitator - Warhammer 40K Game Recommendation Engine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>STEAM COGITATOR</h1>
+            <p class="tagline">⚙️ A WARHAMMER 40K GAME RECOMMENDATION ENGINE ⚙️</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Message Container -->
+            <div id="message-container"></div>
+
+            <!-- Hero Section -->
+            <div class="hero">
+                <h2>Welcome, Seeker of Gaming Knowledge</h2>
+                <p>
+                    Let the sacred Cogitator analyze your Steam library and wishlist.
+                    <br>
+                    The Machine Spirit shall divine which games are worthy of your time.
+                </p>
+            </div>
+
+            <!-- Main Content Card -->
+            <div class="card card-highlighted">
+                <h3>🙏 Commune with the Machine Spirit 🙏</h3>
+                <p style="color: #a0a0a0; margin: 15px 0; font-style: italic;">
+                    "To understand the sacred machine, one must feed it knowledge. Provide thy Steam ID, 
+                    and the Cogitator shall process thy digital collection..."
+                </p>
+
+                <form id="analyze-form">
+                    <div class="form-group">
+                        <label for="steam-id">🔧 Your Steam ID:</label>
+                        <p style="font-size: 0.9em; color: #808080; margin-bottom: 10px;">
+                            Find your Steam ID at: 
+                            <a href="https://steamcommunity.com/support/faqs/view/2816-4339-7457-0B21" 
+                               target="_blank" style="color: #d4af37;">
+                               steamcommunity.com
+                            </a>
+                        </p>
+                        <input 
+                            type="text" 
+                            id="steam-id" 
+                            placeholder="e.g., 76561198012345678" 
+                            required
+                            autocomplete="off"
+                        >
+                    </div>
+
+                    <div style="text-align: center;">
+                        <button type="submit">
+                            ⚡ INITIATE COGITATION ⚡
+                        </button>
+                    </div>
+
+                    <div id="loader" style="display: none; text-align: center; margin-top: 15px;">
+                        <div class="loading-text">
+                            <div class="loader"></div>
+                            <span>Processing through the sacred machine...</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Information Cards -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 40px;">
+                <div class="card">
+                    <h3>📚 What We Do</h3>
+                    <p>
+                        The Cogitator scans your Steam library, 
+                        analyzing genres, playtime, and gaming patterns 
+                        to divine your true preferences.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🎯 How It Works</h3>
+                    <p>
+                        Submit your Steam ID, and our machine-assisted 
+                        algorithms process your collection through the 
+                        sacred engines of recommendation.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>✨ The Result</h3>
+                    <p>
+                        Receive personalized game recommendations blessed 
+                        by the Machine Spirit, ranked by compatibility 
+                        with your demonstrated gaming tastes.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Requirements Card -->
+            <div class="card" style="margin-top: 40px;">
+                <h3>⚠️ Requirements of the Faithful</h3>
+                <ul style="margin-left: 20px; line-height: 2;">
+                    <li>✓ A Steam account (of course)</li>
+                    <li>✓ A public profile (or games set to public)</li>
+                    <li>✓ Your Steam ID (numeric identifier)</li>
+                    <li>✓ Faith in the Omnissiah</li>
+                </ul>
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="card" style="background: rgba(139, 0, 0, 0.1); border-left: 3px solid var(--accent-red); margin-bottom: 40px;">
+                <p style="font-size: 0.9em; color: #c0c0c0;">
+                    <strong>⚠️ NOTICE:</strong> This application requires a Steam API key to function. 
+                    Get one free from 
+                    <a href="https://steamcommunity.com/dev/apikey" target="_blank" style="color: #d4af37;">
+                        the Steam Community
+                    </a>.
+                    Your profile must be public for the Cogitator to analyze your library.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>"In the grim darkness of the far future, there is only... game recommendations."</p>
+            <p style="font-size: 0.85em; margin-top: 10px;">
+                Warhammer 40,000 is a trademark of Games Workshop Limited.
+                <br>
+                Steam is a trademark of Valve Corporation.
+            </p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
